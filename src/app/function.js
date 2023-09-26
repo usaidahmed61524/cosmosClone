@@ -6,16 +6,15 @@ export const loginwithDomain = async (d, i) => {
   let useObj;
 
   try {
-    const response = await axios.get(
-      `/login?username=${d}&tokenid=${i}`
-    );
-    console.log(response.data);
+    const response = await axios.get(`/login?username=${d}&tokenid=${i}`);
+    // console.log(response.data);
     useObj = response.data;
+    alert("successfully Login With MMIT Domain:");
   } catch (error) {
     alert("Error not verify: ", error.message);
   }
 
-  console.log("user object", useObj);
+  // console.log("user object", useObj);
 
-  return { d, i , useObj};
+  return { d, i, useObj };
 };

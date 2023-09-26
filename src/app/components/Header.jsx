@@ -25,7 +25,7 @@ const Header = () => {
     } else {
       const regex = /\.mmit$/;
       if (!regex.test(domain)) {
-        console.log("error");
+        // console.log("error");
         setInputError("Please enter a valid .mmit domain address.");
 
         return;
@@ -34,13 +34,13 @@ const Header = () => {
         let login;
         try {
           login = await loginwithDomain(domain, tokenId);
-          console.log(login.useObj);
+          // console.log(login.useObj);
         } catch (error) {
-          console.log(error);
+          // console.log(error);
         }
 
         const user = login.useObj;
-        console.log(user);
+        // console.log(user);
         auth.login({
           user,
         });
