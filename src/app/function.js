@@ -7,7 +7,7 @@ export const loginwithDomain = async (d, i) => {
 
   try {
     const response = await axios.get(
-      `http://localhost:3000/login?username=${d}&tokenid=${i}`
+      `/login?username=${d}&tokenid=${i}`
     );
     console.log(response.data);
     useObj = response.data;
