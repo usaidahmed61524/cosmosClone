@@ -44,6 +44,37 @@ button.btn.btn-secondary.btn-sm {
   padding: 3px 5px 5px 5px;
 }
 
+/* modal */
+
+.modal-content {
+  color: white !important;
+  background-color: #000 !important;
+}
+.modal-header {
+  border: none !important;
+}
+.modal-footer {
+  border: none !important;
+}
+
+/* For Firefox */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Chrome, Safari, and Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Internet Explorer and Edge */
+input[type="number"]::-ms-clear {
+  display: none;
+}
 /* introduction  ////////////////////////////////////////////////////*/
 
 .introContainer {
@@ -259,7 +290,6 @@ h1.headingcount.color-white {
   .boxCount.before {
     margin: 30px 0px;
   }
-
 
   .boxCount {
     margin: 30px 0px;
