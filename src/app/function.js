@@ -14,7 +14,7 @@ export const loginwithDomain = async (d, i) => {
     alert("Error not verify: ", error.message);
   }
 
-  // console.log("user object", useObj);
+
 
   return { d, i, useObj };
 };
