@@ -1,20 +1,20 @@
-"use client";
+// "use client";
 
-import axios from "axios";
+// import axios from "axios";
 
-export const loginwithDomain = async (d, i) => {
-  let useObj;
+// export const loginwithDomain = async (d, i) => {
+//   let useObj;
 
-  try {
-    const response = await axios.get(`/login?username=${d}&tokenid=${i}`);
-    // console.log(response.data);
-    useObj = response.data;
-    alert("successfully Login With MMIT Domain:");
-  } catch (error) {
-    alert("Error not verify: ", error.message);
-  }
+//   try {
+//     const response = await axios.get(`http://localhost:3000//login?username=${d}&tokenid=${i}`);
+//     // console.log(response.data);
+//     useObj = response.data;
+//     alert("successfully Login With MMIT Domain:");
+//   } catch (error) {
+//     alert("Error not verify: ", error.message);
+//   }
 
 
 
-  return { d, i, useObj };
-};
+//   return { d, i, useObj };
+// };

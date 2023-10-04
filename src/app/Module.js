@@ -1,36 +1,36 @@
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
 
-const { Schema } = mongoose;
+// const { Schema } = mongoose;
 
-const userToAddressSchema = new mongoose.Schema({
-  username: {
-    type: String,
+// const userToAddressSchema = new mongoose.Schema({
+//   username: {
+//     type: String,
 
-    required: true,
+//     required: true,
 
-    unique: true,
-  },
+//     unique: true,
+//   },
 
-  accountAddress: {
-    type: String,
+//   accountAddress: {
+//     type: String,
 
-    required: true,
+//     required: true,
 
-    unique: true,
-  },
+//     unique: true,
+//   },
 
-  tokenId: {
-    type: String,
-  },
+//   tokenId: {
+//     type: String,
+//   },
 
-  txhash: {
-    type: String,
-  },
+//   txhash: {
+//     type: String,
+//   },
 
-  timestamp: {
-    type: String,
-  },
-});
-export const UserToAddressData =
-  mongoose.models.UserToAddress ||
-  mongoose.model("UserToAddress", userToAddressSchema);
+//   timestamp: {
+//     type: String,
+//   },
+// });
+// export const UserToAddressData =
+//   mongoose.models.UserToAddress ||
+//   mongoose.model("UserToAddress", userToAddressSchema);

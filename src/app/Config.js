@@ -1,44 +1,44 @@
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
 
-const MONGODB_URL =
-  "mongodb+srv://ammarsiddiqui622:Zsq9YjAJQIuH0ZV1@cluster0.hn5zgba.mongodb.net/?retryWrites=true&w=majority";
+// const MONGODB_URL =
+//   "mongodb+srv://ammarsiddiqui622:Zsq9YjAJQIuH0ZV1@cluster0.hn5zgba.mongodb.net/?retryWrites=true&w=majority";
 
-if (!MONGODB_URL) {
-  throw new Error(
-    "Please define the MONGODB_URI environment variable inside .env.local"
-  );
-}
+// if (!MONGODB_URL) {
+//   throw new Error(
+//     "Please define the MONGODB_URI environment variable inside .env.local"
+//   );
+// }
 
-let cached = global.mongoose;
+// let cached = global.mongoose;
 
-if (!cached) {
-  cached = global.mongoose = { con: null, promise: null };
-}
+// if (!cached) {
+//   cached = global.mongoose = { con: null, promise: null };
+// }
 
-const dbConnect = async () => {
-  if (cached.conn) {
-    return cached.conn;
-  }
+// const dbConnect = async () => {
+//   if (cached.conn) {
+//     return cached.conn;
+//   }
 
-  if (!cached.promise) {
-    const opts = {
-      bufferCommands: false,
-    };
+//   if (!cached.promise) {
+//     const opts = {
+//       bufferCommands: false,
+//     };
 
-    cached.promise = mongoose.connect(MONGODB_URL, opts).then((mongoose) => {
-      return mongoose;
-    });
-  }
+//     cached.promise = mongoose.connect(MONGODB_URL, opts).then((mongoose) => {
+//       return mongoose;
+//     });
+//   }
 
-  try {
-    cached.conn = await cached.promise;
-  } catch (e) {
-    cached.promise = null;
+//   try {
+//     cached.conn = await cached.promise;
+//   } catch (e) {
+//     cached.promise = null;
 
-    throw e;
-  }
+//     throw e;
+//   }
 
-  return cached.conn;
-};
+//   return cached.conn;
+// };
 
-export default dbConnect;
+// export default dbConnect;
